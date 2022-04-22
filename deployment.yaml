@@ -20,7 +20,7 @@ spec:
         app: nginxhello
     spec:
       containers:
-      - image: macprasanna/sample-tomcat:tagVersion
+      - image: macprasanna/sample-tomcat:2.0
         name: nginxhello
         ports:
         - containerPort: 80
