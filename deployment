@@ -1,0 +1,26 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: nginxhello
+  name: nginxhello
+  annotations:
+    fluxcd.io/ignore: "false"
+    fluxcd.io/automated: "false"
+    #fluxcd.io/tag.nginxhello: semver:~1.19.x
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginxhello
+  template:
+    metadata:
+      labels:
+        app: nginxhello
+    spec:
+      containers:
+      - image: macprasanna/sample-tomcat:tagVersion
+        name: nginxhello
+        ports:
+        - containerPort: 80
