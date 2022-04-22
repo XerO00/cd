@@ -21,7 +21,7 @@ spec:
         app: nginxhello
     spec:
       containers:
-      - image: macprasanna/sample-tomcat:1.0.1
+      - image: macprasanna/sample-tomcat:1.0.3
         name: nginxhello
         ports:
         - containerPort: 80
