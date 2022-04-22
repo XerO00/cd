@@ -9,7 +9,6 @@ metadata:
     fluxcd.io/ignore: "false"
     fluxcd.io/automated: "false"
     #fluxcd.io/tag.nginxhello: semver:~1.19.x
-    fluxcd.io/tag.nginxhello: semver:~1.0.x
 spec:
   replicas: 1
   selector:
@@ -21,7 +20,7 @@ spec:
         app: nginxhello
     spec:
       containers:
-      - image: macprasanna/sample-tomcat:1.0.3
+      - image: macprasanna/sample-tomcat:1.0.1
         name: nginxhello
         ports:
         - containerPort: 80
