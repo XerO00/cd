@@ -23,7 +23,12 @@ spec:
   - http:
 {{- end }}
       paths:
-      - backend:
-          serviceName: {{ $fullName }}
-          servicePort: {{ $svcPort }}
+        - path: /
+          pathType: prefix
+          backend:
+            service:
+              name: {{ $fullName }}
+              port:
+                number: {{ $svcPort }}
 {{- end }}
+
