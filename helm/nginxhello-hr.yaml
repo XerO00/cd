@@ -13,5 +13,5 @@ spec:
   rollback:
     enable: true
     retry: true
-    maxRetries: 5
+    maxRetries: 3
 
