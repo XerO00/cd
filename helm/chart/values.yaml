@@ -8,7 +8,7 @@ color: black
 
 image:
   repository: macprasanna/sample-tomcat
-  tag: 1.0.0
+  tag: 1.0.1
   pullPolicy: IfNotPresent
 
 serviceAccount:
